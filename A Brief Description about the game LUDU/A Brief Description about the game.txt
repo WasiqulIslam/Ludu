@@ -1,0 +1,93 @@
+Category: Computer Tomorrow - Programmers Workshop
+
+I am describing the game Ludu with the help of some figures.
+Ludu is a Bangladeshi Native Game. It is well known in this country.
+I am describing how to play the game.
+
+Figure 01 shows the instance picture when the game has just started.
+There are several buttons named 'Quit', 'Help/About', 'Show Keys', 'Players and Teams'
+and 'Start'. First you have to click on ''Players and Teams' button. This button lets you
+change player settings.
+
+Figure 02 shows a typical player configuration where there are 4 players and two
+teams named 'A' and 'B'. At least two and at most 4 player at a time can play this game.
+This is a team based game and it is possible to have four different teams.
+In this configuration Rahim and Rana are in the same team. Clicking OK confirms the settings.
+
+After changing the player configuration, clicking 'Start' button will start the
+game as shown in Figure 03.At the right side we see that it is player Rahim's turn.
+Also his team is visible. The white small display screen also shows the key of this
+player: Q and W. Q is Rahim's primary key and W is secondary key. Every player
+is assigned with two individual keys for playing. Press and hold the Q key for some time
+and release it. Some sounds will make you understand what is happening. By pressing Q you
+can move.
+
+Figure 04 shows that Rahim moved his die and scored 1.
+But to start playing you have to score 6, that is Chakka.
+
+After some time has passed Figure 05 shows that Latif scores 6, 6 and 2. He can move now.
+
+Figure 06 shows that Latif is moving his pieces. You can experiment with the two keys
+to learn how to move.A white downward arrow will help you to move your pieces.
+The secondary key lets you move the arrow between your pieces. When you want to move
+a piece, you have to bring the arrow next to the piece and press the primary key
+to move it. It's simple...
+
+Figure 07 shows a typical instance of this game.
+
+Figure 08 shows that Rahim scored 6 and we see that among the two dies marked 6 and 2, the 6
+scored die is surrounded by a light black rectangle. This black rectangle indicates that
+the die 6 is currently selected. When we look at the white arrow we see that, Rahim's Red
+piece can discard Rana's green piece 6 steps above.As the 6 scored die is selected Rahim can
+move 6 step further. Figure 09 shows that Rahim moves 6 step further but Rana's green piece
+is not discarded or killed. This is because they are in the same team.
+
+
+Figure 10 shows that Rana's green piece can discard Karim's blue piece
+(near the white arrow). Figure 11 shows that Rana discarded Karim's piece and it is
+at the beginning of it's move(killed).
+
+
+In Figure 12 we see that there is a black downward arrow rather than a white arrow.
+This is a special case which indicates that two pieces can move at a time. In Figure 13
+two yellow pieces moved at a time. This is called double movement. Enemy players face
+dificulties when moving over a doubly grouped pair of pieces. Enemies have to first stay just over the
+doubled pieces and at the next turn they can move only. Enemy doubled pieces can only discard
+or kill them. Doubled pieces cannot move with odd(not even) scores such as 1, 3 or 5.
+They have to move half the way they scored. That is if they scored 6 they will move 3 blocks.
+If you have only one pair of double piece to move and you score odd number then
+your pieces will not move at all.
+
+The main objective of this game is to reach the center orange colored rectangle
+with all of your pieces. The player whose all pieces reach there first has the highest rank.
+Figure 14 shows that a red piece has just entered the goal rectangle(called HOME).
+
+Figure 15 shows that Rahim has scored 2 and only two steps to win.
+
+Figure 16 shows Rahim(red) has entered the HOME area and his team Rana(green) had
+previously entered HOME. At this moment a melodious music will greet the winners.
+At the status screen we see that game is over and winner theam is A.
+The second status screen shows the player ranks.
+
+Some concepts are only discussed here. If you want to know more
+you have to play more.
+
+To run this game you have to install jdk1.3 in your PC at the C:
+drive as shown in Figure 17.
+
+After you have installed jdk you can run the game by just double
+clicking the Run.bat file with the mouse as shown in Figure 18.
+
+If you do not know what is jdk1.3 then you can find it at the market
+or can download it from the site 'www.sun.com'. JDK is Java Development Kit.
+Use the 1.3 version for better performance in LUDU.
+
+Thank you all.
+
+-Wasiqul Islam
+B. Sc. in Computer Science and Engineering(passed in year 2005)
+from USTC(University of science & Technology Chittagong), Chittagong, Bangladesh
+2nd batch
+e-mail: wasiqul_islam@yahoo.com
+phone: 031-650052(TNT, Chittagong, Bangladesh)
+Date: 9 th December 2005
