@@ -1,5 +1,3 @@
-Category: Computer Tomorrow - Programmers Workshop
-
 I am describing the game Ludu with the help of some figures.
 Ludu is a Bangladeshi Native Game. It is well known in this country.
 I am describing how to play the game.
@@ -78,7 +76,7 @@ drive as shown in Figure 17.
 After you have installed jdk you can run the game by just double
 clicking the Run.bat file with the mouse as shown in Figure 18.
 
-You can possible download JDK1.3 from this latest location:
+You can possibly download JDK1.3 from this latest location:
 https://www.oracle.com/java/technologies/java-archive-javase-v13-downloads.html
 If the link is not valid, please search in google to find out "jdk 1.3" runtime.
 
