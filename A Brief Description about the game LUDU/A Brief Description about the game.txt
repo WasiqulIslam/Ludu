@@ -78,16 +78,13 @@ drive as shown in Figure 17.
 After you have installed jdk you can run the game by just double
 clicking the Run.bat file with the mouse as shown in Figure 18.
 
-If you do not know what is jdk1.3 then you can find it at the market
-or can download it from the site 'www.sun.com'. JDK is Java Development Kit.
-Use the 1.3 version for better performance in LUDU.
+You can possible download JDK1.3 from this latest location:
+https://www.oracle.com/java/technologies/java-archive-javase-v13-downloads.html
+If the link is not valid, please search in google to find out "jdk 1.3" runtime.
 
 Thank you all.
 
 -Wasiqul Islam
-B. Sc. in Computer Science and Engineering(passed in year 2005)
-from USTC(University of science & Technology Chittagong), Chittagong, Bangladesh
-2nd batch
-e-mail: wasiqul_islam@yahoo.com
-phone: 031-650052(TNT, Chittagong, Bangladesh)
-Date: 9 th December 2005
+LinkedIn profile:
+https://www.linkedin.com/in/wasiqul-islam/
+e-mail: islam.wasiqul@gmail.com
