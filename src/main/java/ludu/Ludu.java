@@ -16,7 +16,7 @@ import java.util.*;
 //u 4:34 PM 9/30/2005
 //Update started by Wasiqul Islam on 30/12/2025
 
-public class Ludu extends JWindow implements ActionListener, KeyListener, java.io.Serializable
+public class Ludu extends JFrame implements ActionListener, KeyListener
 {
    private javax.swing.Timer positionChanger, refresher;
    private int pointerDisplacement = -10;
@@ -64,9 +64,11 @@ public class Ludu extends JWindow implements ActionListener, KeyListener, java.i
    private KillInfo killInfo[] = new KillInfo[ 3 ];
    private int killInfoLength = 0;
    Sound sound;
-   public Ludu( JFrame owner )                     //tag
+   public Ludu()                 //tag
    {
-      super( owner );
+      super();
+      setTitle( "Ludu" );
+      this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
       System.err.println( "Please Wait..." );
       Container container = getContentPane();
       container.setLayout( new BorderLayout() );
@@ -173,11 +175,11 @@ public class Ludu extends JWindow implements ActionListener, KeyListener, java.i
       startButton = new MButton( "Start" );
       startButton.setButtonWidth( 150 );
       MPanel rhs = new MPanel( 200, 600 );
-      rhs.setBackground( new Color( 179, 117, 191 ) );
+      rhs.setBackground( new Color( 135, 103, 191 ) ); //purple
       MPanel rhsup = new MPanel( 200, 300 );
       MPanel rhsdown = new MPanel( 200, 300 );
-      rhsup.setBackground( new Color( 179, 117, 191 ) );
-      rhsdown.setBackground( new Color( 179, 117, 191 ) );
+      rhsup.setBackground( new Color( 135, 103, 191 ) ); //purple
+      rhsdown.setBackground( new Color( 135, 103, 191 ) ); //purple
       rhs.setLayout( new GridLayout( 2, 1 ) );
       rhsup.setLayout( new FlowLayout() );
       rhsdown.setLayout( new GridLayout( 2, 1 ) );
@@ -237,7 +239,8 @@ public class Ludu extends JWindow implements ActionListener, KeyListener, java.i
       players[ 2 ].setColor( Constants.GREEN );
       players[ 3 ].setColor( Constants.YELLOW );
       resetAll();
-      setSize( 800, 600 );
+      setSize( 820, 640 );
+      setResizable(false);
 
       positionChanger = new javax.swing.Timer( 100, this ); //100ms;changes position 1 pixels every 100 milli second
       refresher = new javax.swing.Timer( 25, this );    //25ms; refresh board 40 times a second
@@ -268,7 +271,7 @@ public class Ludu extends JWindow implements ActionListener, KeyListener, java.i
          if( isStarted )
          {
             sound.playSound( Constants.ERROR_SOUND );
-            int a = JOptionPane.showConfirmDialog( this, "Do you really want to quit current game\nand change player settings?", "Warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE );
+            int a = JOptionPane.showConfirmDialog( this, "Do you want to quit current game\nand change player settings?", "Warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE );
             if( a != JOptionPane.YES_OPTION )
             {
                return;
@@ -436,7 +439,7 @@ public class Ludu extends JWindow implements ActionListener, KeyListener, java.i
          if( isStarted )
          {
             sound.playSound( Constants.ERROR_SOUND );
-            int a = JOptionPane.showConfirmDialog( this, "Do you really want to quit current game\nand Start a new Game?", "Warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE );
+            int a = JOptionPane.showConfirmDialog( this, "Do you want to quit current game\nand Start a new Game?", "Warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE );
             if( a != JOptionPane.YES_OPTION )
             {
                return;
@@ -454,7 +457,7 @@ public class Ludu extends JWindow implements ActionListener, KeyListener, java.i
          JTextArea ha = new JTextArea( 20, 40 );
          ha.setLineWrap( true );
          ha.setWrapStyleWord( true );
-         ha.setText( "Ludu version 2.0.1-jdk1.3up( 4:44 PM 30-Sep-2005 FRI )\nProgrammed by Wasiqul Islam(e-mail address: \'islam.wasiqul@gmail.com\'),\n2nd Batch, Computer Science & Engineering Department,\nUniversity of Science & Technology Chittagong(USTC),\nFoyslake, Chittagong, Bangladesh." +
+         ha.setText( "Ludu version 2.1.0.0\nProgrammed by Wasiqul Islam(e-mail address: \'islam.wasiqul@gmail.com\'),\n2nd Batch, Computer Science & Engineering,\nUniversity of Science & Technology Chittagong (USTC),\nFoyslake, Chittagong, Bangladesh." +
             "\n\nThis program is made to play 'Ludu' game played in Bangladesh.\nI suggest that only who knows Ludu should play this and not including any detailed game playing information but one can learn this game easily by just playing it.\n\nThe button \'Quit\'(at the upper right corner) will always be available to exit the game at any time." +
             "\nAt most 4 players can play this game at a time. The button \'Show keys\' display the keys predefined for each player.\nYou can change player numbers and names etc. with the button named \'Player Settings\'. This is a team based game and there may be at least two teams (and players) and at most four. Game winning is based on teams not on players.\nYou have to click \'Start\' to start a new game.\n\nPlaying the game is very simple.\n" +
             "Each player has both a primary and a secondary key. A help display will automatically show current player name and his/her keys. Most of the job of a player is done by the primary key.\nWith the secondary key a player decides which pieces he wants to move on and can cycle through each valid or movable pieces.\nThe lower right white display area is where the player winning status or rank is displayed. It is displayed in red color whereas normal help display is displayed in blue." +
@@ -646,7 +649,7 @@ public class Ludu extends JWindow implements ActionListener, KeyListener, java.i
    private void exiting()                     //tag
    {
       sound.playSound( Constants.ERROR_SOUND );
-      int a = JOptionPane.showConfirmDialog( this, "Really Want to quit?", "Confirmation", JOptionPane.YES_NO_OPTION );
+      int a = JOptionPane.showConfirmDialog( this, "Do you want to quit?", "Confirmation", JOptionPane.YES_NO_OPTION );
       if( a == JOptionPane.YES_OPTION )
       {
          System.err.println( "Exiting..." );
@@ -1005,7 +1008,10 @@ public class Ludu extends JWindow implements ActionListener, KeyListener, java.i
                return false;
             }
          }
-         if( p % 2 == 0  && players[ currentPlayer ].getLocation( a[ 0 ] ) != Position.getRestingPosition( players[ currentPlayer ].getColor() ) && players[ currentPlayer ].getLocation( a[ 1 ] ) != Position.getRestingPosition( players[ currentPlayer ].getColor() ) && players[ currentPlayer ].getLocation( a[ 0 ] ) == players[ currentPlayer ].getLocation( a[ 1 ] ) )   //check if point is odd or even
+         if( p % 2 == 0  && 
+            players[ currentPlayer ].getLocation( a[ 0 ] ) != Position.getRestingPosition( players[ currentPlayer ].getColor() ) 
+            && players[ currentPlayer ].getLocation( a[ 1 ] ) != Position.getRestingPosition( players[ currentPlayer ].getColor() ) 
+            && players[ currentPlayer ].getLocation( a[ 0 ] ) == players[ currentPlayer ].getLocation( a[ 1 ] ) )   //check if point is odd or even
          {
             int m = ( int ) ( p / 2 );
             if( checkPath( a, players[ currentPlayer ].getLocation( a[ 0 ] ), m, true ) )
@@ -1547,27 +1553,14 @@ public class Ludu extends JWindow implements ActionListener, KeyListener, java.i
    {
       GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
       GraphicsDevice myDevice = ge.getDefaultScreenDevice();
-      DisplayMode newDisplayMode = null, oldDisplayMode = null;
+      DisplayMode oldDisplayMode = null;
       try 
       {
          oldDisplayMode = myDevice.getDisplayMode();
-         /*if( oldDisplayMode.getWidth() != 800 || oldDisplayMode.getHeight() != 600 )
-         {
-            JOptionPane.showMessageDialog( null, "Please change display resolution to 800X600 pixels and run this program again", "Change resolution", JOptionPane.INFORMATION_MESSAGE );
-            System.exit( 0 );
-         }*/
-         JFrame frame = new JFrame();
-         frame.setTitle( "Ludu" );
-         frame.setDefaultCloseOperation( JDialog.DO_NOTHING_ON_CLOSE );
-         frame.setSize( 100, 100 );
-         Ludu app = new Ludu( frame );
-         frame.setVisible( true );
-         frame.requestFocus();
-         newDisplayMode = new DisplayMode( 800, 600, 16, 72 );
+         Ludu app = new Ludu();
          myDevice.setFullScreenWindow( app );
-         myDevice.setDisplayMode( newDisplayMode );
          app.setVisible( true );
-         app.requestFocusInWindow();
+         app.requestFocus();
       }
       finally 
       {

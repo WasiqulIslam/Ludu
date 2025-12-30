@@ -13,7 +13,7 @@ public class MPanel extends JPanel implements java.io.Serializable
    {
       w = w1;
       h = h1;
-      setBackground( new Color( 179, 117, 191 ) );
+      setBackground( new Color( 135, 103, 191 ) ); //purple
    }
    public Dimension getPreferredSize()    //                   (tag)
    {

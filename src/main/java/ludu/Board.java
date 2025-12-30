@@ -439,7 +439,11 @@ public class Board implements java.io.Serializable
                col = Color.black;
             if( i >= 73 && i <= 77 )
             {
-               g2d.setPaint( new GradientPaint( (float)0.0, (float)0.0, col, (float)200.0, (float)200.0, Color.pink, true ) );
+               g2d.setPaint( new GradientPaint( 
+                  (float)0.0, (float)0.0, col, 
+                  (float)200.0, (float)200.0, 
+                  new Color(135,103,191) //purple
+                  , true ) );
             }
             else
             {
