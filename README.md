@@ -1,6 +1,6 @@
 # Ludu
 
-To play Ludu simply download the "Play Ludu v2.0.1.zip" zip file and extract and play (this works in Windows only). No setup is required for this.
+To play Ludu simply download the Ludu.exe file and play (this works in Windows only). No setup is required for this.
 
 <img width="1011" height="789" alt="image" src="https://github.com/user-attachments/assets/ab35f0e2-b580-48a7-a91c-ea6f8ee8eb74" />
 
