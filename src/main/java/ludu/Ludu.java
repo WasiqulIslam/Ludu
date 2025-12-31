@@ -55,7 +55,7 @@ public class Ludu extends JFrame implements ActionListener, KeyListener
    private int numberOfPlayers = 4;   
    private int backupOfNumberOfPlayers;
    private int step = -1, part = -1;   //step eg. -> Constants.GENETATE_DIE, Constants.GUTI_SELECT_MOVE, part eg. -> Constants.PART_1, Constants.PART_2, Constants.PART_3;  
-   private long seed;   //seed is used to generate die numbers. Die numbers are generated from the difference between key pressed and released counted in milli seconds
+   private Long seed = null;   //seed is used to generate die numbers. Die numbers are generated from the difference between key pressed and released counted in milli seconds
    private boolean path[] = new boolean[ 1000 ];
    private boolean tmp[] = new boolean[ 1000 ];
    private boolean movePathFound = true;
@@ -66,11 +66,22 @@ public class Ludu extends JFrame implements ActionListener, KeyListener
    Sound sound;
    public Ludu()                 //tag
    {
+
       super();
+      
       setTitle( "Ludu" );
-      this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
+      //Handle window closing
+      this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+      this.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt){
+                exiting();
+            }
+      });
+      
       System.err.println( "Please Wait..." );
       Container container = getContentPane();
+      container.setBackground( new Color( 129, 142, 214 ) ); //blue type color
       container.setLayout( new BorderLayout() );
       board = new Board();
       for( int i = 0; i < 4; i ++ )
@@ -484,6 +495,8 @@ public class Ludu extends JFrame implements ActionListener, KeyListener
          pointerDisplacement = a;
       }
    }
+
+   //key pressed event happens repeatedly when a key is pressed and hold for a while
    public void keyPressed( KeyEvent event )                     //tag
    {
       try
@@ -495,23 +508,39 @@ public class Ludu extends JFrame implements ActionListener, KeyListener
          {
             if( currentPlayer == 0 && ( key == 'Q' || key == 'q' ) )
             {
-               sound.loopSound( Constants.SHAKE_SOUND );
-               seed = System.currentTimeMillis();
+               if(seed == null)
+               {
+                  sound.loopSound( Constants.SHAKE_SOUND );
+                  seed = System.currentTimeMillis();
+                  System.out.println(seed);
+               }
             }
             else if( currentPlayer == 1 && ( key == 'O' || key == 'o' ) )
             {
-               sound.loopSound( Constants.SHAKE_SOUND );
-               seed = System.currentTimeMillis();
+               if(seed == null)
+               {
+                  sound.loopSound( Constants.SHAKE_SOUND );
+                  seed = System.currentTimeMillis();
+                  System.out.println(seed);
+               }
             }
             else if( currentPlayer == 2 && ( key == 'X' || key == 'x' ) )
             {
-               sound.loopSound( Constants.SHAKE_SOUND );
-               seed = System.currentTimeMillis();
+               if(seed == null)
+               {
+                  sound.loopSound( Constants.SHAKE_SOUND );
+                  seed = System.currentTimeMillis();
+                  System.out.println(seed);
+               }
             }
             else if( currentPlayer == 3 && ( key == 'N' || key == 'n' ) )
             {
-               sound.loopSound( Constants.SHAKE_SOUND );
-               seed = System.currentTimeMillis();
+               if(seed == null)
+               {
+                  sound.loopSound( Constants.SHAKE_SOUND );
+                  seed = System.currentTimeMillis();
+                  System.out.println(seed);
+               }
             }
          }
       }
@@ -816,11 +845,18 @@ public class Ludu extends JFrame implements ActionListener, KeyListener
    }
    private void generatePoint()                     //tag
    {
+      System.out.println(seed);
       long e = System.currentTimeMillis();
+      System.out.println(e);
       int a = ( int ) ( Math.abs( e - seed ) );
-      a += ( ( ( new Random() ).nextDouble() ) * 6 );
+      seed = null;
+      System.out.println(a);
+      int randomNumber =  (int)( ( new Random() ).nextDouble() ) * 6;
+      System.out.println(randomNumber);
+      a += randomNumber;
       a %= 6;
       a += 1;
+      System.out.println(a);
       if( debugStatus )
       {
          int aaa = 1;
