@@ -1,7 +1,5 @@
-@ -1,7 +1,10 @@
 # Ludu
 
-To play Ludu simply download the "Play Ludu v2.0.1.zip" zip file and extract and play (this works in windows only). No setup is required for this.
 To play Ludu simply download the "Play Ludu v2.0.1.zip" zip file and extract and play (this works in Windows only). No setup is required for this.
 
 ![image](https://github.com/user-attachments/assets/c9381896-607d-44ef-b522-b93584d5d558)
