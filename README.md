@@ -1,9 +1,10 @@
 # Ludu
 
-To play Ludu simply download the Ludu.exe file and play (this works in Windows only). No setup is required for this.
+Just download and run Ludu.exe to start playing instantly. This is a portable Windows application; no setup or installation is necessary.
 
 <img width="1011" height="789" alt="image" src="https://github.com/user-attachments/assets/ab35f0e2-b580-48a7-a91c-ea6f8ee8eb74" />
 
-Ludu (Ludo) is a Bangladeshi Native Game. It is well known in this country. This game is also played in other countries.
-This program lets you play Ludu game in a single computer offline game with at most 4 players. This is not a multiplayer online game, this is a "real" player offline game. 2, 3 or 4 players can play in a single game. Team play is also possible. This is not the snake side of Ludu, this is the opposide board game side. Complex moves such as double move (playing two pawns in a single move when two of them are in the same place etc.) is also possible.
-This is an old program. New JDK versions may not support full game as key listeners are not working. If you download old JDK1.3 and run the game using that then it works perfectly as tested on year 2023 in Windows 11 machine.
+Ludo is a beloved traditional game in Bangladesh and a popular pastime enjoyed worldwide. This offline digital version brings the classic board game experience to your computer, supporting 2 to 4 players in a single session.
+
+Whether you are playing a free-for-all or coordinating with a partner in Team Mode, this program captures the authentic feel of the game. It even supports advanced rules and complex moves, such as "double moves" (moving two pawns simultaneously when they occupy the same space). Perfect for local multiplayer fun with friends and family!
+
