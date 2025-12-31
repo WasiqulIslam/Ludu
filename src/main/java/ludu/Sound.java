@@ -59,6 +59,7 @@ public class Sound implements java.io.Serializable
          if( lastSound >= 0 && lastSound < n )
             soundClips[ lastSound ].stop();
          lastSound = index;
+         soundClips[ index ].setFramePosition(0); // Rewind to the beginning
          soundClips[ index ].start();
       }
    }
@@ -79,6 +80,7 @@ public class Sound implements java.io.Serializable
             return;
          if( lastSound >= 0 && lastSound < n )
             soundClips[ lastSound ].stop();
+         soundClips[ index ].setFramePosition(0); // Rewind to the beginning
          lastSound = index;
          soundClips[ index ].loop(Clip.LOOP_CONTINUOUSLY);
          soundClips[ index ].start();
