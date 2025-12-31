@@ -21,16 +21,7 @@ public class Guti implements java.io.Serializable
          gutiID = gid;
          type = t;
       }
-      else
-      {
-         try
-         {
-            finalize();  //calling destructor
-         }
-         catch( Throwable throwable )
-         {
-         }
-      }
+      //else do nothing
    }
    public void setType( int t )         //              (tag)
    {
