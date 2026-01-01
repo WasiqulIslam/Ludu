@@ -9,9 +9,15 @@ Ludo is a beloved traditional game in Bangladesh and a popular pastime enjoyed w
 Whether you are playing a free-for-all or coordinating with a partner in Team Mode, this program captures the authentic feel of the game. It even supports advanced rules and complex moves, such as "double moves" (moving two pawns simultaneously when they occupy the same space). Perfect for local multiplayer fun with friends and family!
 
 Key Engineering Takeaways:
+
 ✅ Motion & Animation: Implement frame-based movement and smooth UI transitions.
+
 ✅ Audio Integration: Manage asset loading and real-time sound triggers.
+
 ✅ 2D Rendering: Master coordinate systems, sprite manipulation.
+
 ✅ Logic & Algorithms: Solve complex mathematical problems through efficient code.
+
 ✅ Full-Cycle Development: Architect and develop a complete system from the ground up.
+
 
