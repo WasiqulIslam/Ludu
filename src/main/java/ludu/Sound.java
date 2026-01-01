@@ -21,15 +21,15 @@ public class Sound implements java.io.Serializable
    {
       try
       {
-         soundClips[ 0 ] = getClip( "click.wav");
-         soundClips[ 1 ] = getClip( "error.wav");
-         soundClips[ 2 ] = getClip( "shake.wav");
-         soundClips[ 3 ] = getClip( "launch.wav");
-         soundClips[ 4 ] = getClip( "select.wav");
-         soundClips[ 5 ] = getClip( "move.wav");
-         soundClips[ 6 ] = getClip( "gameover.wav");
-         soundClips[ 7 ] = getClip( "help.wav");
-         soundClips[ 8 ] = getClip( "kill.wav");
+         soundClips[ 0 ] = getClip( "CLICK.WAV");
+         soundClips[ 1 ] = getClip( "ERROR.WAV");
+         soundClips[ 2 ] = getClip( "SHAKE.WAV");
+         soundClips[ 3 ] = getClip( "LAUNCH.WAV");
+         soundClips[ 4 ] = getClip( "SELECT.WAV");
+         soundClips[ 5 ] = getClip( "MOVE.WAV");
+         soundClips[ 6 ] = getClip( "GAMEOVER.WAV");
+         soundClips[ 7 ] = getClip( "HELP.WAV");
+         soundClips[ 8 ] = getClip( "KILL.WAV");
       }
       catch( Throwable t )
       {
